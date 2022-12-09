@@ -1,0 +1,105 @@
+body
+{
+    background-color: rgb(40, 42, 58);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(40, 42, 58);
+}
+.container
+{
+    background-color: rgb(198, 151, 73);
+    margin: 5%;
+    padding: 3%;
+    padding-top: 0%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+header
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: rgb(115, 95, 50);
+    color: whitesmoke;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.content
+{
+    display: flex;
+}
+.left
+{
+    max-width: 60%;
+    margin: 3%;
+    font-size: larger;
+}
+.right 
+{
+    max-width: 40%;
+    margin: 3%;
+}
+.table
+{
+    text-align: left;
+    border-color: rgb(40, 42, 58);
+    border-style: solid;
+}
+#cover
+{
+    max-width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.inf
+{
+    text-align: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.lnk
+{
+    color: whitesmoke;
+    font-size: larger;
+}
+header ul {
+    display: flex;
+}
+header {
+    display: flex;
+    align-items: center;
+}
+.imgch
+{
+    max-width: 150px;
+}
+.char
+{
+    margin: 3%;
+    font-size: larger;
+}
+.vol
+{
+    margin: 3%;
+    font-size: larger;
+    text-align: center;
+}
+video
+{
+    max-width: 100%;
+}
+footer
+{
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: black;
+    color: whitesmoke;
+    padding: 1%;
+}
