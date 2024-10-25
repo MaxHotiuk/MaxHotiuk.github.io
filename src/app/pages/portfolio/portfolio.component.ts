@@ -38,7 +38,7 @@ import { Project } from '../../interfaces/portfolio.interface';
 
                   <div class="flex flex-wrap gap-2 my-2">
                     @for (tech of project.technologies; track tech) {
-                      <span class="badge badge-primary">{{ tech }}</span>
+                      <span class="badge badge-primary whitespace-nowrap">{{ tech }}</span>
                     }
                   </div>
                   <div class="card-actions justify-end">
@@ -56,7 +56,17 @@ import { Project } from '../../interfaces/portfolio.interface';
         </div>
       </div>
     </div>
-  `
+  `,
+  styles: [`
+    :host {
+      display: block;
+    }
+    
+    .badge {
+      min-width: fit-content;
+      padding: 0.5rem 1rem;
+    }
+  `]
 })
 export class PortfolioComponent {
   projects: Project[] = [
