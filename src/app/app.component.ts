@@ -85,7 +85,7 @@ export class AppComponent {
 
   toggleTheme(event: Event) {
     const isChecked = (event.target as HTMLInputElement).checked;
-    const theme = isChecked ? 'dim' : 'winter';
+    const theme = isChecked ? 'black' : 'winter';
     document.documentElement.setAttribute('data-theme', theme);
   }
 }
