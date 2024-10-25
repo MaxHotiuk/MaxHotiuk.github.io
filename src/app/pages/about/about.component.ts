@@ -83,15 +83,14 @@ import { RouterLink } from '@angular/router';
       <div class="card bg-base-200">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-4">Technologies & Tools</h2>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             <div class="card bg-base-300">
               <div class="card-body p-4">
                 <h3 class="font-bold mb-2">Frontend</h3>
                 <div class="flex flex-wrap gap-2">
-                  <span class="badge badge-primary">Angular</span>
-                  <span class="badge badge-primary">TypeScript</span>
-                  <span class="badge badge-primary">HTML5</span>
-                  <span class="badge badge-primary">CSS3</span>
+                  @for (tech of frontendTechs; track tech) {
+                    <span class="badge badge-primary whitespace-nowrap px-3">{{tech}}</span>
+                  }
                 </div>
               </div>
             </div>
@@ -99,9 +98,9 @@ import { RouterLink } from '@angular/router';
               <div class="card-body p-4">
                 <h3 class="font-bold mb-2">Backend</h3>
                 <div class="flex flex-wrap gap-2">
-                  <span class="badge badge-primary">ASP.NET Core</span>
-                  <span class="badge badge-primary">C#</span>
-                  <span class="badge badge-primary">Entity Framework</span>
+                  @for (tech of backendTechs; track tech) {
+                    <span class="badge badge-primary whitespace-nowrap px-3">{{tech}}</span>
+                  }
                 </div>
               </div>
             </div>
@@ -109,9 +108,9 @@ import { RouterLink } from '@angular/router';
               <div class="card-body p-4">
                 <h3 class="font-bold mb-2">Databases</h3>
                 <div class="flex flex-wrap gap-2">
-                  <span class="badge badge-primary">MySQL</span>
-                  <span class="badge badge-primary">SQLite</span>
-                  <span class="badge badge-primary">PostgreSQL</span>
+                  @for (tech of databaseTechs; track tech) {
+                    <span class="badge badge-primary whitespace-nowrap px-3">{{tech}}</span>
+                  }
                 </div>
               </div>
             </div>
@@ -119,10 +118,9 @@ import { RouterLink } from '@angular/router';
               <div class="card-body p-4">
                 <h3 class="font-bold mb-2">Other</h3>
                 <div class="flex flex-wrap gap-2">
-                  <span class="badge badge-primary">Azure</span>
-                  <span class="badge badge-primary">Git</span>
-                  <span class="badge badge-primary">Docker</span>
-                  <span class="badge badge-primary">REST APIs</span>
+                  @for (tech of otherTechs; track tech) {
+                    <span class="badge badge-primary whitespace-nowrap px-3">{{tech}}</span>
+                  }
                 </div>
               </div>
             </div>
@@ -130,7 +128,21 @@ import { RouterLink } from '@angular/router';
         </div>
       </div>
     </div>
-  `
+  `,
+  styles: [`
+    :host {
+      display: block;
+    }
+    
+    .badge {
+      min-width: fit-content;
+      padding: 0.5rem 1rem;
+    }
+  `]
 })
 export class AboutComponent {
+  frontendTechs = ['Angular', 'TypeScript', 'HTML5', 'CSS3'];
+  backendTechs = ['ASP.NET Core', 'C#', 'Entity Framework'];
+  databaseTechs = ['MySQL', 'SQLite', 'PostgreSQL'];
+  otherTechs = ['Azure', 'Git', 'Docker', 'REST APIs'];
 }
