@@ -70,8 +70,7 @@ export class PortfolioComponent {
         'Robust Backend Services: Leveraged ASP.NET Core to create RESTful APIs that handle task management operations.',
         'Performance Monitoring: Integrated monitoring tools to track server performance and task execution times.'
       ],
-      technologies: ['ASP.NET Core', 'Angular', 'MySQL', 'Load Balancing'],
-      githubUrl: 'https://github.com/yourusername/task-management-system',
+      technologies: ['ASP.NET Core', 'Angular', 'MySQL', 'Load Balancing']
     },
     {
       id: 2,
@@ -95,8 +94,7 @@ export class PortfolioComponent {
         'Angular-Driven User Experience: The frontend is designed to be intuitive and responsive, enhancing user engagement.',
         'Backend Integration: The ASP.NET Core backend validates submitted numbers against the Fibonacci sequence.'
       ],
-      technologies: ['ASP.NET Core', 'Angular', 'MySQL', 'JWT'],
-      githubUrl: 'https://github.com/yourusername/fibonacci-task-manager'
+      technologies: ['ASP.NET Core', 'Angular', 'MySQL', 'JWT']
     }
   ];
 }
