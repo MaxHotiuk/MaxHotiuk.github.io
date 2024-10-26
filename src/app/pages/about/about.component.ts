@@ -27,7 +27,7 @@ import { RouterLink } from '@angular/router';
                 <h3 class="font-bold text-lg mb-2">Education</h3>
                 <p class="font-semibold">Ivan Franko National University of Lviv</p>
                 <p>Bachelor of Computer Science – 3rd Year</p>
-                <p>Expected Graduation: 2025</p>
+                <p>Expected Graduation: 2026</p>
               </div>
             </div>
             <div class="relative">
