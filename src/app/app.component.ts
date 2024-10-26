@@ -41,6 +41,7 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
                 type="checkbox"
                 (change)="toggleTheme($event)"
                 class="hidden"
+                [checked]="isDarkTheme"
               />
 
               <svg class="swap-off fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -78,12 +79,13 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
     </div>
   `
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Max Hotuik - Personal Website';
+  isDarkTheme: boolean = false;
 
   toggleTheme(event: Event) {
-    const isChecked = (event.target as HTMLInputElement).checked;
-    const theme = isChecked ? 'black' : 'winter';
+    this.isDarkTheme = (event.target as HTMLInputElement).checked;
+    const theme = this.isDarkTheme ? 'dim' : 'winter';
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   }
@@ -92,6 +94,7 @@ export class AppComponent {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       document.documentElement.setAttribute('data-theme', savedTheme);
+      this.isDarkTheme = savedTheme === 'dim';
     }
   }
 }
