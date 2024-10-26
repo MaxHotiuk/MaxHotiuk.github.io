@@ -72,18 +72,6 @@ export class PortfolioComponent {
   projects: Project[] = [
     {
       id: 1,
-      title: 'Task Management System with Load Balancing',
-      description: 'Developed a comprehensive web application designed to manage and process resource-intensive tasks effectively.',
-      keyFeatures: [
-        'Dynamic Load Balancing: Implemented a load balancing mechanism that distributes incoming tasks across multiple servers, ensuring optimal utilization of resources.',
-        'User-Friendly Interface: Built a responsive and intuitive interface using Angular, allowing users to easily submit tasks and monitor their status in real time.',
-        'Robust Backend Services: Leveraged ASP.NET Core to create RESTful APIs that handle task management operations.',
-        'Performance Monitoring: Integrated monitoring tools to track server performance and task execution times.'
-      ],
-      technologies: ['ASP.NET Core', 'Angular', 'MySQL', 'Load Balancing']
-    },
-    {
-      id: 2,
       title: 'Encryption Web API',
       description: 'Created a secure API specifically for encryption and decryption tasks, emphasizing data integrity and user authentication.',
       keyFeatures: [
@@ -95,7 +83,7 @@ export class PortfolioComponent {
       technologies: ['ASP.NET Core', 'Angular', 'MySQL', 'JWT'],
     },
     {
-      id: 3,
+      id: 2,
       title: 'Fibonacci Task Manager',
       description: 'Created a platform for users to submit and manage tasks related to Fibonacci numbers, with real-time feedback and validation.',
       keyFeatures: [
